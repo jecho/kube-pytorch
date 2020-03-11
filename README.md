@@ -13,7 +13,7 @@ helm install --name=pytorch-sample1 --namespace=pytorch --set configMap=reg-cm -
 Basic MNIST Example
 
 ```
-kubectl -n pytorch create -f reg-cm.yaml
+kubectl -n pytorch create -f mnist-cm.yaml
 helm install --name=pytorch-sample2 --namespace=pytorch --set configMap=mnist-cm --set persistence.enabled=false \
     --set securityContext.runAsUser=0 --set entrypoint.file=main.py bitnami/pytorch  
 ```
